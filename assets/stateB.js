@@ -18,10 +18,7 @@
 					template: "<h2> conteudo da View B</h2>" 
 				}
 			}
-		}
-
-
-		)
+		})
 	}
 
 })();
