@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Named View</title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	 <script src="app.js"></script>
+	 <script src="assets/stateA.js"></script>
+	 <script src="assets/stateB.js"></script>
+</head>
+<body ng-app="myApp">
+<ul>
+	<li> <a ui-sref="home"> Home</a></li>
+	<li> <a ui-sref="stateA"> State A</a></li>
+	<li> <a ui-sref="stateB"> State B</a></li>
+</ul>
+<div ui-view></div>
+
+<pre>
+  <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+  $logged = {{ user_logged }}
+  $state = {{$state.current.name}}
+  $stateParams = {{$stateParams}}
+  $state full url = {{ $state.$current.url.source }}
+  <!-- $state.$current is not a public api, we are using it to
+    display the full url for learning purposes-->
+</pre>
+
+</body>
+</html>
